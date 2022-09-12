@@ -2,16 +2,16 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-int EntryData(string message)
+int EntryData(string message)                                                           //метод ввода целого числа
 {
     System.Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
-int number = EntryData("Введите число - основание -> ");
-int power = EntryData("Введите степень в которую нужно возвести основание -> ");
+int number = EntryData("Введите число - основание -> ");                                //вводим число
+int power = EntryData("Введите степень в которую нужно возвести основание -> ");        //вводим степень в которую надо возвести
 int result = number;
 
-for (int i = 1; i<power; i++)
+for (int i = 1; i<power; i++)                                                           //запускаем цикл возведения в степень 
 {
     if (power == 1)
     {
@@ -20,5 +20,5 @@ for (int i = 1; i<power; i++)
     result = result * number; 
 }
 
-System.Console.WriteLine($"{number} в степени {power} = {result}");
+System.Console.WriteLine($"{number} в степени {power} = {result}");                     //выводим результат
 
